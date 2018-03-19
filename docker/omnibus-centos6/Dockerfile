@@ -63,6 +63,7 @@ RUN mkdir -p /opt/metasploit-framework
 RUN chown jenkins /var/cache/omnibus
 RUN chown jenkins /opt/metasploit-framework
 RUN chown -R jenkins /opt/chef/embedded/lib/ruby/gems
+RUN chown -R jenkins /opt/chef/embedded/bin
 
 RUN echo "#!/usr/bin/expect -f" > /usr/bin/signrpm && \
 	echo "spawn rpm --addsign {*}\$argv" >> /usr/bin/signrpm && \
